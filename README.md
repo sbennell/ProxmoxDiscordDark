@@ -15,24 +15,24 @@ Proxmox Virtual Environment
 The installation is done via the CLI utility. Run the following commands on the PVE node serving the Web UI:  Clearing browser cache is necessary to see the changes.
 
 ```
-~# wget https://raw.githubusercontent.com/sbennell/ProxmoxDiscordDark/master/ProxmoxDiscordDark.sh
+~# wget https://raw.githubusercontent.com/sbennell/ProxmoxDiscordDark/master/PVEDiscordDark.sh
 ~# bash ProxmoxDiscordDark.sh install
 ```
 Or this oneliner
 ```
-bash <(curl -s https://raw.githubusercontent.com/sbennell/ProxmoxDiscordDark/master/ProxmoxDiscordDark.sh ) install
+bash <(curl -s https://raw.githubusercontent.com/sbennell/ProxmoxDiscordDark/master/PVEDiscordDark.sh ) install
 ```
 Proxmox Backup Server
 
 The installation is done via the CLI utility. Run the following commands on the PBS node serving the Web UI:  Clearing browser cache is necessary to see the changes.
 
 ```
-~# wget https://raw.githubusercontent.com/sbennell/ProxmoxDiscordDark/master/ProxmoxDiscordDark.sh
+~# wget https://raw.githubusercontent.com/sbennell/ProxmoxDiscordDark/master/PBSDiscordDark.sh
 ~# bash ProxmoxDiscordDark.sh install
 ```
 Or this oneliner
 ```
-bash <(curl -s https://raw.githubusercontent.com/sbennell/ProxmoxDiscordDark/master/ProxmoxDiscordDark.sh ) install
+bash <(curl -s https://raw.githubusercontent.com/sbennell/ProxmoxDiscordDark/master/PBSDiscordDark.sh ) install
 ```
 
 Note that you will need to run the install command every time `pve-manager` is updated (i.e. after every Proxmox update)
