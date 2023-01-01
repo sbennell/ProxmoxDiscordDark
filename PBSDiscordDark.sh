@@ -18,8 +18,8 @@ SCRIPTPATH="${SCRIPTDIR}$(basename "${BASH_SOURCE[0]}")"
 
 OFFLINEDIR="${SCRIPTDIR}offline"
 
-REPO=${REPO:-"sbennell/PVEDiscordDark"}
-DEFAULT_TAG="PBS"
+REPO=${REPO:-"sbennell/ProxmoxDiscordDark"}
+DEFAULT_TAG="master"
 TAG=${TAG:-$DEFAULT_TAG}
 BASE_URL="https://raw.githubusercontent.com/$REPO/$TAG"
 
