@@ -37,7 +37,7 @@ hash sed 2>/dev/null || {
     exit 1;
 }
 
-hash pveversion 2>/dev/null || { 
+hash PBSVersion 2>/dev/null || { 
     echo -e >&2 "${BRED}PVE installation required but missing from your system${REG}";
     exit 1;
 }
@@ -85,8 +85,8 @@ function checkSupported {
         fi
     else 
         local SUPPORTEDARR=($(echo "$SUPPORTED" | tr ',' '\n'))
-        if ! (printf '%s\n' "${SUPPORTEDARR[@]}" | grep -q -P "$PVEVersionMajor"); then
-            echo -e "${WARN}You might encounter issues because your version ($PVEVersionMajor) is not matching currently supported versions ($SUPPORTED)."
+        if ! (printf '%s\n' "${SUPPORTEDARR[@]}" | grep -q -P "$PBSVersionMajor"); then
+            echo -e "${WARN}You might encounter issues because your version ($PBSVersionMajor) is not matching currently supported versions ($SUPPORTED)."
             echo -e "If you do run into any issues on >newer< versions, please consider opening an issue at https://github.com/sbennell/PVEDiscordDark/issues.${REG}"
         fi
     fi
@@ -136,7 +136,7 @@ function status {
         echo -e "  CSS:         $(sha256sum /usr/share/javascript/proxmox-backup/css/dd_style.css 2>/dev/null  || echo N/A)"
         echo -e "  JS:          $(sha256sum /usr/share/javascript/proxmox-backup/js/dd_patcher.js 2>/dev/null  || echo N/A)\n"
         echo -e "PBS"
-        echo -e "  Version:     $PVEVersion (major $PBSVersionMajor)\n"
+        echo -e "  Version:     $PBSVersion (major $PBSVersionMajor)\n"
         echo -e "Utility hash:  $(sha256sum $SCRIPTPATH 2>/dev/null  || echo N/A)"
         echo -e "Offline mode:  $OFFLINE"
     fi
