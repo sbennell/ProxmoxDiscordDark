@@ -10,7 +10,7 @@
 The theme now runs its own JavaScript code which patches the colors for certain components (and charts). This approach is much better, and safer than what was used previously.
 
 ## Installation 
-#Proxmox Virtual Environment
+Proxmox Virtual Environment
 
 The installation is done via the CLI utility. Run the following commands on the PVE node serving the Web UI:  Clearing browser cache is necessary to see the changes.
 
@@ -22,7 +22,8 @@ Or this oneliner
 ```
 bash <(curl -s https://raw.githubusercontent.com/sbennell/ProxmoxDiscordDark/master/ProxmoxDiscordDark.sh ) install
 ```
-#Proxmox Backup Server
+Proxmox Backup Server
+
 The installation is done via the CLI utility. Run the following commands on the PBS node serving the Web UI:  Clearing browser cache is necessary to see the changes.
 
 ```
