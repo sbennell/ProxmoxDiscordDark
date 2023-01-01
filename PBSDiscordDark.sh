@@ -38,7 +38,7 @@ hash sed 2>/dev/null || {
 }
 
 hash proxmox-backup-client version 2>/dev/null || { 
-    echo -e >&2 "${BRED}PVE installation required but missing from your system${REG}";
+    echo -e >&2 "${BRED}PBS installation required but missing from your system${REG}";
     exit 1;
 }
 
