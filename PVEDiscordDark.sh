@@ -72,16 +72,16 @@ PVEVersionMajor=$(echo $PVEVersion | cut -d'-' -f1)
 #region Helper functions
 function checkSupported {   
     if [ "$OFFLINE" = false ]; then
-        local SUPPORTED=$(curl -f -s "$BASE_URL/meta/supported")
+        local SUPPORTED=$(curl -f -s "$BASE_URL/meta/PVEsupported")
     else
-        local SUPPORTED=$(cat "$OFFLINEDIR/meta/supported")
+        local SUPPORTED=$(cat "$OFFLINEDIR/meta/PVEsupported")
     fi
 
     if [ -z "$SUPPORTED" ]; then 
         if [ "$OFFLINE" = false ]; then
-            echo -e "${WARN}Could not reach supported version file ($BASE_URL/meta/supported). Skipping support check.${REG}"
+            echo -e "${WARN}Could not reach supported version file ($BASE_URL/meta/PVEsupported). Skipping support check.${REG}"
         else
-            echo -e "${WARN}Could not find supported version file ($OFFLINEDIR/meta/supported). Skipping support check.${REG}"
+            echo -e "${WARN}Could not find supported version file ($OFFLINEDIR/meta/PVEsupported). Skipping support check.${REG}"
         fi
     else 
         local SUPPORTEDARR=($(echo "$SUPPORTED" | tr ',' '\n'))
