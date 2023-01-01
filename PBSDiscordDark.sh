@@ -37,11 +37,6 @@ hash sed 2>/dev/null || {
     exit 1;
 }
 
-hash proxmox-backup-client version 2>/dev/null || { 
-    echo -e >&2 "${BRED}PBS installation required but missing from your system${REG}";
-    exit 1;
-}
-
 if test -d "$OFFLINEDIR"; then
     echo "Offline directory detected, entering offline mode."
     OFFLINE=true
